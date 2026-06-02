@@ -1,21 +1,39 @@
 package com.example.numberguesses
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+    val secretNumber= kotlin.random.Random.nextInt(100)+ 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        val numberEditText = findViewById<EditText>(R.id.numberEditText)
+        val guessButton = findViewById<Button>(R.id.guessButton)
+        val feedbackTextView =  findViewById<TextView>(R.id.feedbackTextView)
 
+    guessButton.setOnClickListener {
+        val guess = numberEditText.text.toString().toInt()
 
+        if (guess == secretNumber) {
+            feedbackTextView.text = "Correct!"
+        } else if (guess < secretNumber) {
+            feedbackTextView.text = "Too Low!"
+        } else if (guess > secretNumber){
+            feedbackTextView.text = "Too High"
+        }
 
-
+    }
 
 
 
