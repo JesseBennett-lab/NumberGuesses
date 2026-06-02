@@ -12,33 +12,54 @@
         android:id="@+id/numberEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="592dp"
+        android:autofillHints=""
         android:backgroundTint="#FFFFFF"
         android:ems="10"
+        android:hint="@string/enter_number"
         android:inputType="number"
-        android:hint="Enter number"
+        android:minHeight="48dp"
         android:textColor="#E91E63"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="94dp" />
+        android:textColorHint="#880E4F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/guessButton"
         android:layout_width="196dp"
         android:layout_height="54dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="281dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="396dp"
         android:backgroundTint="#FBFBFB"
-        android:text="Guess"
+        android:text="@string/guess"
         android:textColor="#E91E63"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="281dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/feedbackTextView"
         android:layout_width="248dp"
         android:layout_height="82dp"
-        android:text="Feedback here"
-        android:textColor="#E91E63"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="514dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="135dp"
+        android:text="@string/feedback_here"
+        android:textColor="#880E4F"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="514dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
