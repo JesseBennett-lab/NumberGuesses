@@ -5,15 +5,40 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0ACC4"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/numberEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter number"
+        android:textColor="#E91E63"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="196dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#FBFBFB"
+        android:text="Guess"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+    <TextView
+        android:id="@+id/feedbackTextView"
+        android:layout_width="248dp"
+        android:layout_height="82dp"
+        android:text="Feedback here"
+        android:textColor="#E91E63"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="514dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
