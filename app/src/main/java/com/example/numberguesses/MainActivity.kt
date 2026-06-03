@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+    var guessCount = 0
     val secretNumber = kotlin.random.Random.nextInt(100) + 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,9 +24,13 @@ class MainActivity : AppCompatActivity() {
         val feedbackTextView = findViewById<TextView>(R.id.feedbackTextView)
 
         guessButton.setOnClickListener {
-          val guess = numberEditText.text.toString().toInt()
+          var guess = numberEditText.text.toString().toInt()
+          guessCount++
 
-          if (guess == secretNumber) {
+          if (guessCount >= 5 && guess != secretNumber) {
+              feedbackTextView.text ="You Lose! The number was $secretNumber"
+          }
+          else if (guess == secretNumber) {
               feedbackTextView.text ="Correct"
           }
           else if (guess < secretNumber) {
